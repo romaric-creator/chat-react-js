@@ -1,0 +1,122 @@
+.box-list {
+  width: 30%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.39);
+  /* overflow-y: scroll; */
+}
+.b_list::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 15px;
+  /* background-color: black; */
+}
+.b_list::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: white;
+  border-radius: 15px;
+}
+.pp {
+  font-size: 2em;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list {
+  width: 90%;
+  height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.445);
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.desc {
+  display: block;
+  width: 100%;
+  margin-left: 10px;
+}
+.nad {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2;
+}
+.b_seaech {
+  width: 100%;
+  height: 10%;
+  position: relative;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+}
+.b_b_search {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.b_b_search input {
+  height: 70%;
+  width: 80%;
+  outline: none;
+  padding: 10px;
+  color: rgb(173, 171, 171);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.192);
+  border-radius: 10px;
+}
+.b_list {
+  overflow-y: scroll;
+  height: 77%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: auto;
+  position: relative;
+}
+.b_b_search span {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.b_b_search input::placeholder {
+  padding: 5px;
+}
+.params {
+  transform: rotate(90deg) translateY(50%);
+  color: white;
+  cursor: pointer;
+}
+.menu{
+  background-color: aliceblue;
+  padding: 5px;
+  position: relative;
+  z-index: 8;
+  width: 140px;
+  position: absolute;
+  height: 85px;
+  right: 0;
+  top: 50px;
+  z-index: 10;
+  box-shadow: 0px 0px 55px 2px rgba(0, 0, 0, 0.192);
+}
+.open{
+  top: 50px;
+  z-index: -10;
+}
+.menu li{
+  padding: 5px 10px;
+  list-style: none;
+  cursor: pointer;
+}
+.menu li:hover{
+  background-color:rgba(0, 0, 0, 0.192);  
+}

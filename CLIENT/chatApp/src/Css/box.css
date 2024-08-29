@@ -1,0 +1,27 @@
+*{
+  transition: none;
+
+  padding: 0;
+  margin: 0;
+}
+.contenair {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+  background-image: linear-gradient(to bottom , #98b3f8, #4686fd);
+}
+.box{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.hed{
+  color: white;
+  text-align: center;
+}
