@@ -1,6 +1,7 @@
 .box-list {
   width: 30%;
   height: 100%;
+  position: relative;
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.39);
   /* overflow-y: scroll; */
@@ -95,6 +96,26 @@
   color: white;
   cursor: pointer;
 }
+.param {
+  color: rgba(252, 252, 252, 0.808);
+  padding:7px 5px;
+  background-color: #4686fd;
+  border-radius: 50%;
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+.param2 {
+  color: rgba(252, 252, 252, 0.808);
+  padding:7px 7px;
+  background-color: #4686fd;
+  border-radius: 50%;
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  cursor: pointer;
+}
 .menu{
   background-color: aliceblue;
   padding: 5px;
@@ -119,4 +140,109 @@
 }
 .menu li:hover{
   background-color:rgba(0, 0, 0, 0.192);  
+}
+
+.profil,.amie{
+  width: 100%;
+  height: 100%;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  border-radius: 15px;;
+  z-index: -15;
+}
+.amie{
+  background-color: #e7e7e7;
+}
+.profil.open2{
+  z-index: 10;
+}
+.amie.open3{
+  z-index: 10;
+}
+.profil ul{
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+}
+.profil ul li{
+  width: 98%;
+  margin: 5px 0;
+  padding: 10px 0px;
+}
+.user{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.pp2{
+  font-size: 2em;
+}
+.ci{
+  height: 70px;
+  width: 70px;
+  top: -7%;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #4686fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.trv{
+  padding: 5px 5px;
+  color: white;
+  background-color: #4686fd;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 10px 5px;
+  position: absolute;
+}
+.an{
+  top: 40px;
+  width: 100%;
+  position: absolute;
+}
+.cc{
+  background-color: #4686fd;
+}
+.foram.open4{
+  display: block;
+}
+.foram{
+  top: 50px;
+  display: none;
+  background-color:#e7e7e7;
+  position: relative;
+  height: 100%;
+  border-radius: 15px;
+  width: 93%;
+  top: 0;
+  margin: 0 auto;
+  bottom: 0px;
+  padding: 5px 10px;
+}
+.foram form{
+  margin: 50px 0;
+}
+.tam{
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.nameP{
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: center;
+  color: #4686fd;
 }

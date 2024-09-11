@@ -5,13 +5,21 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 export default function ChatReg() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/register',data);
-    console.log(response.data);
-    window.location.href='/connexion';
+      const response = await axios.post(
+        "http://localhost:5000/api/register",
+        data
+      );
+      fetch()
+      console.log(response.data);
+      window.location.href = "/connexion";
     } catch (error) {
       console.error("Erreur d'insertion:", error);
     }
@@ -47,6 +55,16 @@ export default function ChatReg() {
             helperText={errors.nom && "Nom est requis"}
           />
           <TextField
+            label="Prenom"
+            variant="outlined"
+            fullWidth
+            size="small"
+            margin="normal"
+            {...register("Prenom", { required: true })}
+            error={errors.Prenom && true}
+            helperText={errors.Prenom && "Prenom est requis"}
+          />
+          <TextField
             label="Email"
             variant="outlined"
             fullWidth
@@ -68,16 +86,22 @@ export default function ChatReg() {
             error={errors.password && true}
             helperText={errors.password && "Mot de passe est requis"}
           />
-          {/* je veux un champ file pour le profile en utilisant material ui pour le design*/}
-          {/* <input type="file" {...register("profileImage")} /> */}
-          
+          <TextField
+            fullWidth
+            type="file"
+            size="small"
+            margin="normal"
+            {...register("profileImage", { required: true })}
+            error={errors.profil && true}
+            helperText={errors.profil && "profil est requis"}
+          />
+
           <Button type="submit" variant="contained" style={{ width: "100%" }}>
             Enregistrement
           </Button>
         </form>
         <Typography paddingTop={2}>
-          Vous voulez créer un compte ?{" "}
-          <Link to="/connexion">Cliquez ici</Link>{" "}
+          Vous voulez créer un compte ? <Link to="/connexion">Cliquez ici</Link>{" "}
         </Typography>
       </Box>
     </Stack>

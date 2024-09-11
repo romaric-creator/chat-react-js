@@ -78,7 +78,16 @@ router.get("/userP", (req, res) => {
     }
   )
 });
-
+router.get("/pp", (req,res) => {
+  const idpr = req.query.id;
+  db.query(
+    `SELECT * FROM users WHERE id_user=${idpr}`,
+    async (err,results) => {
+      if (err) return res.status(500).send(err);
+      res.json(results);
+    }
+  )
+})
 router.get("/offineUp", (req,res) => {
   const id = req.query.id;
   db.query(
@@ -89,7 +98,29 @@ router.get("/offineUp", (req,res) => {
     }
   )
 })
-
+router.put("/addami", (req,res) => {
+  const emaila = req.body.email;
+  const idamie = req.body.id;
+  db.query(
+    `SELECT * FROM users WHERE email = ?`,
+    [emaila],
+     (err,results) => {
+      if (err) return res.status(500).send(err);
+      if(results.length > 0 ){
+        const update = "UPDATE users SET idamie = ? WHERE email = ?";
+        db.query(update,[idamie,emaila],(err,rows) => {
+          if(err){
+            res.status(500).send({message: "impossible d'ajouter a votre liste d'ami(e)"});
+          }else{
+            res.send({message: "amie ajouter"});
+          }
+        })
+      }else{
+        return res.status(500).send({message: 'Email introuvable ou incorect'})
+      } 
+    }
+  )
+})
 router.post("/message", (req,res) => {
   const idcon = req.body.idcon;
   const idres = req.body.idres;

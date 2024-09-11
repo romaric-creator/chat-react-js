@@ -5,12 +5,6 @@ export default function List_us({ query, val, user }) {
   const openchat = (idres) => {
     localStorage.setItem("idres", idres);
   };
-  useEffect(() => {
-    
-    return () => {
-      
-    };
-  }, []);
   return (
     // affiche les utilisateur ici sauf celui de l'utilisateur connecter
     <div className="b_list">
@@ -20,6 +14,7 @@ export default function List_us({ query, val, user }) {
             className="list"
             key={query.id_user}
             onClick={() => openchat(query.id_user)}
+            id="bme"
           >
             <div className="pp">
               <span className="icon-user"></span>

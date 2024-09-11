@@ -25,7 +25,7 @@ export default function Box_send_mess() {
         }
   };
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="nav">
       <div className="nav">
         <input type="file" id="file-mess"/>
         <label htmlFor="file-mess">
